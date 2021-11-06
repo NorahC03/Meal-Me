@@ -1,0 +1,161 @@
+*{
+    box-sizing:border-box;
+}
+body{
+    background:#5EC2B7;
+    color:#fff;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+   margin:0; 
+   /* display: flex;
+   flex-direction: row; */
+}
+.container{
+    margin:0 auto;
+    max-width:800px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+}
+.flex{
+    display: flex;
+}
+
+input,button{
+    
+    border:1px solid;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius:7px;
+    font-size:20px;
+    margin:0;
+    border-radius: 5px;
+}
+input[type='text']{
+    width:350px;
+}
+.search-btn{
+    cursor: pointer;
+    border-left: 0 ;
+    border-radius: 0;
+    border-top-right-radius: 4px;
+    border-top-right-radius: 4px;
+    color: black;
+}
+.random-btn{
+    cursor: pointer;
+    margin-left: 12px;
+}
+
+
+@media(max-width:500px){
+    input[type="text"]{
+        width:200px;
+    }
+}
+
+.meals{
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 50px;
+
+
+}
+.meal{
+    cursor:pointer;
+    position:relative;
+    height: 180px;
+    width:180px;
+    text-align:center;
+}
+.meal img{
+    width: 100%;
+    height: 100%;
+    border:4px #fff solid
+
+
+}
+.milo{
+     position: absolute;
+     top: 0;
+     bottom: 0;
+     height: 100%;
+     width: 100%;
+     background:rgba(0,0,0,0.6);
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+      
+
+}
+.milo:hover{
+    opacity: 1;
+}
+.single-meal{
+    margin:30px;
+    width:70%;
+
+
+}
+.single-meal img{
+    width:350px;
+    margin:15px;
+    border:4px #fff dotted;
+    border-radius:25px;
+
+}
+.single-meal-info{
+    margin:20px;
+    padding :10px;
+    border:2px #e09850 dashed;
+}
+.single-meal p{
+    margin:0px;
+    letter-spacing:0.7px;
+    line-height:  2.5;
+}
+.single-meal ul{
+    padding-left: 0px;
+    list-style: none;
+
+}
+.single-meal ul li{
+    border:1px solid #ededed;
+    border-radius: 10px;
+    display: inline-block;
+    color:#2d2013;
+    font: size 15px;
+    padding: 10px;
+    margin: 5px;
+}
+
+
+@media(max-width:800px){
+    .meals{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+@media(max-width:700px){
+    .meals{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .meal{
+        height: 200px;
+        width: 200px;
+    }
+
+}
+@media(max-width:500px){
+    .meals{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .meal{
+        height: 300px;
+        width: 300px;
+    }
+
+
+}
